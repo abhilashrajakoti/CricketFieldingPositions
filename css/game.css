@@ -1,0 +1,24 @@
+#cricgrnd{
+display: block;
+margin: 0 auto;
+}
+
+body {
+background-color:#336699;
+}
+
+.fieldPix{
+    height: 15px;
+    width: 15px
+}
+
+.postionName{
+    height: 100px;
+    width: 100px
+}
+
+.fore-ground .fieldPosDiv{
+    position:absolute;
+    top:487px;
+    left:524px;
+  }
