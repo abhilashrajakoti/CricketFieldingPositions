@@ -1,5 +1,4 @@
-var tempPosValue;
-function createTable() {
+/*function createTable() {
     var grid_table = document.createElement("TABLE");
     var rows = 25;
     var cols = 25;
@@ -35,9 +34,9 @@ function setFieldPosition(id) {
     //alert(posName);
     ;
 
-}
+}*/
 
-function gameAPIAjax(id) {
+/*function gameAPIAjax(id) {
     var xhttp = new XMLHttpRequest();
     var jsonObj = null;;
     xhttp.onreadystatechange = function () {
@@ -51,9 +50,9 @@ function gameAPIAjax(id) {
 
     xhttp.send();
 
-}
+}*?
 
-function showFieldPosition() {
+/*function showFieldPosition() {
     var target="positonName"+this.id;
     document.getElementById(target).style.display = "block";
 }
@@ -61,7 +60,7 @@ function showFieldPosition() {
 function hideFieldPosition(){
     var target="positonName"+this.id;
     document.getElementById(target).style.display = "none";
-}
+}*/
 
 function populateGround() {
     var xhttp = new XMLHttpRequest();
@@ -76,17 +75,19 @@ function populateGround() {
 
                 var pixel = document.createElement("IMG");
                 pixel.id = jsonObj[i].id;
+                pixel.title=jsonObj[i].name;
                 pixel.src = "images/round3.jpg";
                 pixel.style.height = "15px";
                 pixel.style.width = "15px";
 
-                var span = document.createElement("SPAN");
+                /*var span = document.createElement("SPAN");
                 span.id = "positonName" + jsonObj[i].id;
                 span.textContent = jsonObj[i].name;
                 span.style.display = "none";
+                span.style.zIndex=99999;*/
                 
                 div.appendChild(pixel);
-                div.appendChild(span);
+                // div.appendChild(span);
                 div.style.position = "absolute";
                 div.style.top = jsonObj[i].cssTop + "px";
                 div.style.left = jsonObj[i].cssLeft + "px";
@@ -94,8 +95,8 @@ function populateGround() {
                 
                 outerDiv.appendChild(div);
                 
-                pixel.addEventListener("mousemove",showFieldPosition);
-                pixel.addEventListener("mouseout",hideFieldPosition); 
+                /*pixel.addEventListener("mousemove",showFieldPosition);
+                pixel.addEventListener("mouseout",hideFieldPosition);*/ 
 
             }
         }
