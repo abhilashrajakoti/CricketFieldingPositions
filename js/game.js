@@ -101,7 +101,7 @@ function populateGround() {
             }
         }
     };
-    xhttp.open("GET", "http://localhost:8080/gameapi/restapi/pixels/", true);
+    xhttp.open("GET", "http://localhost/gameapi/restapi/pixels/", true);
 
     xhttp.send()
 
