@@ -7,6 +7,16 @@ body {
 background-color:#336699;
 }
 
+.fore-ground{
+    position: relative;
+}
+
+#cricgrnd{
+position: fixed;
+top:5px;
+left:391px;    
+height: auto;
+}
 /* .fieldPix{
     height: 15px;
     width: 15px

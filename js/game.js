@@ -70,8 +70,8 @@ function populateGround() {
             var outerDiv = document.getElementById("fore-ground");
             for (var i = 0; i < jsonObj.length; i++) {
 
-                var div = document.createElement("DIV");
-                div.className = "fieldPosDiv" + jsonObj[i].id;
+                //var div = document.createElement("DIV");
+                //div.className = "fieldPosDiv" + jsonObj[i].id;
 
                 var pixel = document.createElement("IMG");
                 pixel.id = jsonObj[i].id;
@@ -79,6 +79,10 @@ function populateGround() {
                 pixel.src = "images/round3.jpg";
                 pixel.style.height = "15px";
                 pixel.style.width = "15px";
+                pixel.style.position = "fixed";
+                pixel.style.top = jsonObj[i].cssTop + "px";
+                pixel.style.left = jsonObj[i].cssLeft + "px";
+                
 
                 /*var span = document.createElement("SPAN");
                 span.id = "positonName" + jsonObj[i].id;
@@ -86,14 +90,14 @@ function populateGround() {
                 span.style.display = "none";
                 span.style.zIndex=99999;*/
                 
-                div.appendChild(pixel);
-                // div.appendChild(span);
-                div.style.position = "absolute";
-                div.style.top = jsonObj[i].cssTop + "px";
-                div.style.left = jsonObj[i].cssLeft + "px";
+                // div.appendChild(pixel);
+                // // div.appendChild(span);
+                // div.style.position = "absolute";
+                // div.style.top = jsonObj[i].cssTop + "px";
+                // div.style.left = jsonObj[i].cssLeft + "px";
                 
                 
-                outerDiv.appendChild(div);
+                outerDiv.appendChild(pixel);
                 
                 /*pixel.addEventListener("mousemove",showFieldPosition);
                 pixel.addEventListener("mouseout",hideFieldPosition);*/ 
